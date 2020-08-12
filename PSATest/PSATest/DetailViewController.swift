@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var data : String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +18,9 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = self.data
+    }
 
     /*
     // MARK: - Navigation

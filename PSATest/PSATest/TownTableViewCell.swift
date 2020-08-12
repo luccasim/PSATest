@@ -10,6 +10,10 @@ import UIKit
 
 class TownTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var townNameLabel: UILabel!
+    @IBOutlet weak var townTempLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

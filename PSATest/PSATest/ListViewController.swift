@@ -10,21 +10,53 @@ import UIKit
 
 class ListViewController: UIViewController {
 
+    @IBOutlet weak var townTableView: UITableView!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    
+    let data : [String] = ["Paris", "London", "Madrid", "Rome", "Berlin"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        self.townTableView.delegate = self
+        self.townTableView.dataSource = self
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let id = segue.identifier
+        
+        switch id {
+        case "pushToDetail":
+            let vc = segue.destination as? DetailViewController
+            if let index = sender as? Int {
+                vc?.data = self.data[index]
+            }
+        default:    break
+        }
+    }
+}
+
+extension ListViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.data.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell") as? TownTableViewCell else {
+            fatalError("This pattern disappear with SwiftUI!, of course this cell exist...")
+        }
+        
+        cell.townNameLabel.text = self.data[indexPath.row]
+        
+        return cell
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "pushToDetail", sender: indexPath.row)
+    }
 }
