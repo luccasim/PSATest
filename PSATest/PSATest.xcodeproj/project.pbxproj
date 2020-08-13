@@ -88,6 +88,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8467644C24E5E564000A80A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				843B652924E47A6C00036A60 /* SearchViewController.swift */,
+				843B652724E47A5900036A60 /* ListViewController.swift */,
+				843B652F24E47E9F00036A60 /* TownTableViewCell.swift */,
+				843B652B24E47C3D00036A60 /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8467644D24E5E5B3000A80A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84FED6AE24E2CF1C0031B502 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8467644E24E5E5C1000A80A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8467645124E5EBF0000A80A6 /* App Management */,
+				8467645024E5E84A000A80A6 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8467644F24E5E802000A80A6 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				84FED6B424E2CF1D0031B502 /* Assets.xcassets */,
+				84FED6B624E2CF1D0031B502 /* LaunchScreen.storyboard */,
+				84FED6B924E2CF1D0031B502 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		8467645024E5E84A000A80A6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				84FED6B124E2CF1C0031B502 /* PSATest.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8467645124E5EBF0000A80A6 /* App Management */ = {
+			isa = PBXGroup;
+			children = (
+				84FED6A824E2CF1C0031B502 /* AppDelegate.swift */,
+				84FED6AA24E2CF1C0031B502 /* SceneDelegate.swift */,
+			);
+			path = "App Management";
+			sourceTree = "<group>";
+		};
 		84FED69C24E2CF1C0031B502 = {
 			isa = PBXGroup;
 			children = (
@@ -113,17 +168,10 @@
 		84FED6A724E2CF1C0031B502 /* PSATest */ = {
 			isa = PBXGroup;
 			children = (
-				84FED6A824E2CF1C0031B502 /* AppDelegate.swift */,
-				84FED6AA24E2CF1C0031B502 /* SceneDelegate.swift */,
-				84FED6AE24E2CF1C0031B502 /* Main.storyboard */,
-				843B652924E47A6C00036A60 /* SearchViewController.swift */,
-				843B652724E47A5900036A60 /* ListViewController.swift */,
-				843B652F24E47E9F00036A60 /* TownTableViewCell.swift */,
-				843B652B24E47C3D00036A60 /* DetailViewController.swift */,
-				84FED6B424E2CF1D0031B502 /* Assets.xcassets */,
-				84FED6B624E2CF1D0031B502 /* LaunchScreen.storyboard */,
-				84FED6B924E2CF1D0031B502 /* Info.plist */,
-				84FED6B124E2CF1C0031B502 /* PSATest.xcdatamodeld */,
+				8467644E24E5E5C1000A80A6 /* Model */,
+				8467644D24E5E5B3000A80A6 /* View */,
+				8467644C24E5E564000A80A6 /* Controller */,
+				8467644F24E5E802000A80A6 /* Supporting files */,
 			);
 			path = PSATest;
 			sourceTree = "<group>";
