@@ -32,7 +32,7 @@ class HourlyTableViewCell: UITableViewCell {
 
 }
 
-extension HourlyTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource {
+extension HourlyTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -54,4 +54,9 @@ extension HourlyTableViewCell : UICollectionViewDelegate, UICollectionViewDataSo
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 60.0, height: 80.0)
+    }
+    
 }

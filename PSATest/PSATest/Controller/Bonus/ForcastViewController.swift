@@ -51,7 +51,7 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
                 fatalError()
             }
             
-            cell.dayLabel.text      = "Sunday"
+            cell.dayLabel.text      = "Lundi"
             cell.tempMaxLabel.text  = "34"
             cell.tempMinLabel.text  = "19"
             
@@ -63,6 +63,8 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
                 fatalError()
             }
             
+            cell.data = [1,2,3]
+            
             return cell
             
         case 2:
@@ -70,10 +72,29 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "WeekCell") as? WeekTableViewCell else {
                 fatalError()
             }
+            
+            cell.dayLabel.text = "Mardi"
+            cell.iconImage.image = UIImage(named: "02n")
+            cell.tempMaxLabel.text = "24"
+            cell.tempMinLabel.text = "12"
                         
             return cell
             
         default:    return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let section = indexPath.section
+        
+        switch section {
+        case 0,2:
+            return CGFloat(60)
+        case 1:
+            return CGFloat(90)
+        default:
+            return 0
         }
     }
 }

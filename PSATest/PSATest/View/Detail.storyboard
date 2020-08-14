@@ -570,7 +570,7 @@
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pT6-rR-w3C">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Df7-4l-7mE">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Df7-4l-7mE">
                                                         <size key="itemSize" width="85" height="118"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -694,6 +694,12 @@
                                                 <constraint firstItem="n0C-8o-vlx" firstAttribute="centerY" secondItem="5Dh-DH-zn3" secondAttribute="centerY" id="uWi-Dd-SqB"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="LZR-gG-M5Y" id="Fxd-Df-OiD"/>
+                                            <outlet property="iconImage" destination="GhC-mk-IJ5" id="BHP-FA-WKk"/>
+                                            <outlet property="tempMaxLabel" destination="uDc-MV-yxi" id="CMQ-UC-ym5"/>
+                                            <outlet property="tempMinLabel" destination="S4y-nr-4qr" id="iPj-U9-V83"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
