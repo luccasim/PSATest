@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var informationView: UIView!
     
-    var vm = DetailViewModel()
+    let vm = DetailViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

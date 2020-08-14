@@ -12,7 +12,7 @@ class MetricsViewController: UIViewController {
 
     @IBOutlet weak var metricsTableView: UITableView!
     
-    var data : [Int] = [1,2,3,4,5,6,7,8,9,0]
+    let vm = MetricsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class MetricsViewController: UIViewController {
         self.metricsTableView.delegate = self
         
     }
-
 }
 
 extension MetricsViewController : UITableViewDelegate, UITableViewDataSource {
@@ -33,7 +32,7 @@ extension MetricsViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.vm.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,8 +41,8 @@ extension MetricsViewController : UITableViewDelegate, UITableViewDataSource {
             fatalError()
         }
 
-        cell.textLabel?.text = "[\(self.data[indexPath.row] + 30)]"
-        cell.detailTextLabel?.text = "\(self.data[indexPath.row])"
+        cell.textLabel?.text = self.vm.getTitle(Index: indexPath.row)
+        cell.detailTextLabel?.text = self.vm.getValue(Index: indexPath.row)
         
         return cell
     }

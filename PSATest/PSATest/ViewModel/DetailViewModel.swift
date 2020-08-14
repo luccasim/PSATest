@@ -10,6 +10,8 @@ import Foundation
 
 class DetailViewModel {
     
+    private var context = Context.shared
+    
     var main : String {
         return "Pluie"
     }
