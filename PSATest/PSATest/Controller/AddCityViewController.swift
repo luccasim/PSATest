@@ -12,10 +12,9 @@ class AddCityViewController: UIViewController {
 
     @IBOutlet weak var resultTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    var data : [String] = []
-    let searchController = UISearchController(searchResultsController: nil)
-    
+
+    let vm = AddCityViewModel()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,18 +27,10 @@ class AddCityViewController: UIViewController {
     
 }
 
-extension AddCityViewController : UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        if let text = searchBar.text, text.count > 3 {
-            self.data.append(text)
-            self.resultTableView.reloadData()
-        }
-    }
+extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.data.count
+        self.vm.data.count
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,10 +39,27 @@ extension AddCityViewController : UITableViewDelegate, UITableViewDataSource, UI
             fatalError()
         }
         
-        cell.townNameLabel.text = self.data[indexPath.row]
+        cell.townNameLabel.text = self.vm.data[indexPath.row]
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.vm.add(Index: indexPath.row)
+        self.navigationController?.popViewController(animated: true)
+    }
+}
 
+extension AddCityViewController : UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        if let input = searchBar.text {
+            self.vm.search(CityName: input) { (result) in
+                self.searchBar.text = nil
+                self.resultTableView.reloadData()
+            }
+        }
+    }
 }

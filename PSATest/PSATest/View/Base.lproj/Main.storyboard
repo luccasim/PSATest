@@ -10,7 +10,7 @@
         <!--List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="PSATest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="PSA_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="27" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TownCell" rowHeight="74" id="J4I-xc-3e0" customClass="CityTableViewCell" customModule="PSATest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TownCell" rowHeight="74" id="J4I-xc-3e0" customClass="CityTableViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J4I-xc-3e0" id="M57-Af-KSt">
@@ -82,7 +82,7 @@
                     <navigationItem key="navigationItem" id="cYW-hs-lzE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Eg-MW-uGK">
                             <connections>
-                                <segue destination="vl9-cq-bKR" kind="showDetail" identifier="pushToSearch" id="KL2-8w-rsu"/>
+                                <segue destination="vl9-cq-bKR" kind="show" identifier="pushToSearch" id="KL2-8w-rsu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,13 +99,13 @@
         <!--Add City View Controller-->
         <scene sceneID="FBj-oU-eaN">
             <objects>
-                <viewController id="vl9-cq-bKR" customClass="AddCityViewController" customModule="PSATest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vl9-cq-bKR" customClass="AddCityViewController" customModule="PSA_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tc8-yk-OTg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-FQ-aJu">
-                                <rect key="frame" x="0.0" y="13" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="57" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <searchBar key="tableFooterView" contentMode="redraw" text="" id="bEy-nd-nGx">
                                     <rect key="frame" x="0.0" y="126" width="414" height="44"/>
@@ -113,7 +113,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TownCell" rowHeight="70" id="3VU-nl-aHi" customClass="CityTableViewCell" customModule="PSATest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TownCell" rowHeight="70" id="3VU-nl-aHi" customClass="CityTableViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3VU-nl-aHi" id="bGc-ub-IfP">
@@ -186,7 +186,7 @@
         <!--Detail View Controller-->
         <scene sceneID="mkV-o6-dbU">
             <objects>
-                <viewController id="B2i-8x-RAe" customClass="DetailViewController" customModule="PSATest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B2i-8x-RAe" customClass="DetailViewController" customModule="PSA_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fl8-8H-aA6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,3 +8,21 @@
 
 import Foundation
 
+final class AddCityViewModel {
+    
+    private var context = Context.shared
+    
+    var data : [String] = []
+    
+    func search(CityName:String, Result: @escaping ((Bool)->())) {
+        
+        //Here call Webservice
+        self.data.append(CityName)
+        Result(true)
+        
+    }
+    
+    func add(Index:Int) {
+        self.context.cityList.append(self.data[Index])
+    }
+}
