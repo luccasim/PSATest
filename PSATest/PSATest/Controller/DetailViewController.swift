@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var tempLabel: UILabel!
     
@@ -18,15 +18,19 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var informationView: UIView!
     
-    
-    var data : [String] = ["weekly", "informations"]
+    var vm = DetailViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.mainLabel.text = vm.main
+        self.descriptionLabel.text = vm.description
+        self.tempLabel.text = vm.temp
+        
+    }
     
 }

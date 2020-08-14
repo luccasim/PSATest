@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8434C48D24E5FD6000130FC2 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8434C48C24E5FD6000130FC2 /* Detail.storyboard */; };
+		8434C48D24E5FD6000130FC2 /* Bonus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8434C48C24E5FD6000130FC2 /* Bonus.storyboard */; };
 		8434C49824E61E8F00130FC2 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */; };
 		8434C49C24E6BEA900130FC2 /* ForcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */; };
 		8434C49E24E6BEC000130FC2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */; };
 		8434C4A024E6C75800130FC2 /* DayCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49F24E6C75800130FC2 /* DayCellTableViewCell.swift */; };
 		8434C4A224E6C79E00130FC2 /* WeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4A124E6C79E00130FC2 /* WeekTableViewCell.swift */; };
 		8434C4A424E6C9E800130FC2 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4A324E6C9E800130FC2 /* HourlyCollectionViewCell.swift */; };
+		8434C4A724E6DD9D00130FC2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4A624E6DD9D00130FC2 /* DetailViewModel.swift */; };
 		843B652824E47A5900036A60 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652724E47A5900036A60 /* ListViewController.swift */; };
 		843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652924E47A6C00036A60 /* AddCityViewController.swift */; };
 		843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652B24E47C3D00036A60 /* DetailViewController.swift */; };
@@ -48,13 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8434C48C24E5FD6000130FC2 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		8434C48C24E5FD6000130FC2 /* Bonus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bonus.storyboard; sourceTree = "<group>"; };
 		8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
 		8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastViewController.swift; sourceTree = "<group>"; };
 		8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
 		8434C49F24E6C75800130FC2 /* DayCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellTableViewCell.swift; sourceTree = "<group>"; };
 		8434C4A124E6C79E00130FC2 /* WeekTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableViewCell.swift; sourceTree = "<group>"; };
 		8434C4A324E6C9E800130FC2 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		8434C4A624E6DD9D00130FC2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		843B652724E47A5900036A60 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		843B652924E47A6C00036A60 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		843B652B24E47C3D00036A60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		8434C4A524E6DD4700130FC2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8434C4A624E6DD9D00130FC2 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8467644C24E5E564000A80A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				84FED6AE24E2CF1C0031B502 /* Main.storyboard */,
-				8434C48C24E5FD6000130FC2 /* Detail.storyboard */,
+				8434C48C24E5FD6000130FC2 /* Bonus.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +226,7 @@
 				8467644E24E5E5C1000A80A6 /* Model */,
 				8467644D24E5E5B3000A80A6 /* View */,
 				8467644C24E5E564000A80A6 /* Controller */,
+				8434C4A524E6DD4700130FC2 /* ViewModel */,
 				8467644F24E5E802000A80A6 /* Supporting files */,
 			);
 			path = PSATest;
@@ -346,7 +357,7 @@
 				84FED6B824E2CF1D0031B502 /* LaunchScreen.storyboard in Resources */,
 				84FED6B524E2CF1D0031B502 /* Assets.xcassets in Resources */,
 				843B653424E4A9D300036A60 /* README.md in Resources */,
-				8434C48D24E5FD6000130FC2 /* Detail.storyboard in Resources */,
+				8434C48D24E5FD6000130FC2 /* Bonus.storyboard in Resources */,
 				84FED6B024E2CF1C0031B502 /* Main.storyboard in Resources */,
 				843B653224E4A9B800036A60 /* Test_iOS_EN.pdf in Resources */,
 			);
@@ -382,6 +393,7 @@
 				84FED6A924E2CF1C0031B502 /* AppDelegate.swift in Sources */,
 				843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */,
 				843B652824E47A5900036A60 /* ListViewController.swift in Sources */,
+				8434C4A724E6DD9D00130FC2 /* DetailViewModel.swift in Sources */,
 				84FED6AB24E2CF1C0031B502 /* SceneDelegate.swift in Sources */,
 				843B653024E47E9F00036A60 /* CityTableViewCell.swift in Sources */,
 				8434C49C24E6BEA900130FC2 /* ForcastViewController.swift in Sources */,

@@ -12,7 +12,7 @@ class MetricsViewController: UIViewController {
 
     @IBOutlet weak var metricsTableView: UITableView!
     
-    var data : [Int] = [1,2,3,4,5,6,1]
+    var data : [Int] = [1,2,3,4,5,6,7,8,9,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +46,9 @@ extension MetricsViewController : UITableViewDelegate, UITableViewDataSource {
         cell.detailTextLabel?.text = "\(self.data[indexPath.row])"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(50)
     }
 }

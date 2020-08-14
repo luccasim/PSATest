@@ -252,7 +252,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="O3v-0j-09W" id="y5a-9a-Fw5"/>
                         <outlet property="informationView" destination="scq-vf-kI4" id="rQd-ja-TIq"/>
-                        <outlet property="nameLabel" destination="r1a-iF-tOd" id="QRC-rY-Xfi"/>
+                        <outlet property="mainLabel" destination="r1a-iF-tOd" id="QRC-rY-Xfi"/>
                         <outlet property="sepView" destination="rNp-aS-4O6" id="Ehu-4d-3ti"/>
                         <outlet property="tempLabel" destination="EDt-xU-Igb" id="Akh-vo-fLL"/>
                     </connections>
@@ -261,10 +261,10 @@
             </objects>
             <point key="canvasLocation" x="1083" y="771"/>
         </scene>
-        <!--Detail-->
+        <!--Bonus-->
         <scene sceneID="6Hq-0B-v3c">
             <objects>
-                <viewControllerPlaceholder storyboardName="Detail" id="uzf-1F-UVf" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Bonus" id="uzf-1F-UVf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3j-EH-3G0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957" y="771"/>
