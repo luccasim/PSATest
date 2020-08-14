@@ -48,6 +48,10 @@ extension HourlyTableViewCell : UICollectionViewDelegate, UICollectionViewDataSo
             fatalError()
         }
         
+        cell.hourLabel.text = "15:56"
+        cell.iconImage.image = UIImage(named: "01n")
+        cell.tempLabel.text = "12"
+        
         return cell
     }
 }

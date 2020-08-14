@@ -554,6 +554,11 @@
                                                 <constraint firstItem="YoQ-QO-gQS" firstAttribute="width" secondItem="3Wa-yO-Lb6" secondAttribute="width" multiplier="0.884058" id="y8X-Yp-oQl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="JyM-7G-Ui6" id="OI7-kL-4ww"/>
+                                            <outlet property="tempMaxLabel" destination="W5a-wq-szT" id="Moy-By-YTJ"/>
+                                            <outlet property="tempMinLabel" destination="jiB-hc-mnx" id="uo8-b3-AlF"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyCell" rowHeight="116" id="GV1-K8-pgU" customClass="HourlyTableViewCell" customModule="PSATest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93" width="414" height="116"/>
@@ -614,6 +619,11 @@
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="85" height="118"/>
+                                                            <connections>
+                                                                <outlet property="hourLabel" destination="1sB-qv-TNH" id="aCr-T1-6mI"/>
+                                                                <outlet property="iconImage" destination="5zh-iY-MQT" id="pYK-Iy-lZx"/>
+                                                                <outlet property="tempLabel" destination="KDL-7X-jIN" id="CBB-3x-9DD"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
