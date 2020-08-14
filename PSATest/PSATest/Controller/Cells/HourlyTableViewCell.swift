@@ -10,7 +10,14 @@ import UIKit
 
 class HourlyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var hourCollectionView: UICollectionView!
+    @IBOutlet weak var hourCollectionView: UICollectionView! {
+        didSet {
+            self.hourCollectionView.delegate = self
+            self.hourCollectionView.dataSource = self
+        }
+    }
+    
+    var data : [Int] = [1,2,3,4,5,6,7,8,9,0]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,4 +30,24 @@ class HourlyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension HourlyTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HourlyCell", for: indexPath) as? HourlyCollectionViewCell else {
+            fatalError()
+        }
+        
+        return cell
+    }
 }

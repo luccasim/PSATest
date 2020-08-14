@@ -11,6 +11,9 @@
 		8434C49824E61E8F00130FC2 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */; };
 		8434C49C24E6BEA900130FC2 /* ForcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */; };
 		8434C49E24E6BEC000130FC2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */; };
+		8434C4A024E6C75800130FC2 /* DayCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49F24E6C75800130FC2 /* DayCellTableViewCell.swift */; };
+		8434C4A224E6C79E00130FC2 /* WeekTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4A124E6C79E00130FC2 /* WeekTableViewCell.swift */; };
+		8434C4A424E6C9E800130FC2 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4A324E6C9E800130FC2 /* HourlyCollectionViewCell.swift */; };
 		843B652824E47A5900036A60 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652724E47A5900036A60 /* ListViewController.swift */; };
 		843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652924E47A6C00036A60 /* AddCityViewController.swift */; };
 		843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652B24E47C3D00036A60 /* DetailViewController.swift */; };
@@ -49,6 +52,9 @@
 		8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
 		8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastViewController.swift; sourceTree = "<group>"; };
 		8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
+		8434C49F24E6C75800130FC2 /* DayCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellTableViewCell.swift; sourceTree = "<group>"; };
+		8434C4A124E6C79E00130FC2 /* WeekTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekTableViewCell.swift; sourceTree = "<group>"; };
+		8434C4A324E6C9E800130FC2 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		843B652724E47A5900036A60 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		843B652924E47A6C00036A60 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		843B652B24E47C3D00036A60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */,
+				8434C4A324E6C9E800130FC2 /* HourlyCollectionViewCell.swift */,
+				8434C49F24E6C75800130FC2 /* DayCellTableViewCell.swift */,
+				8434C4A124E6C79E00130FC2 /* WeekTableViewCell.swift */,
 				843B652F24E47E9F00036A60 /* CityTableViewCell.swift */,
 			);
 			path = Cells;
@@ -365,6 +374,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8434C49E24E6BEC000130FC2 /* MetricsViewController.swift in Sources */,
+				8434C4A224E6C79E00130FC2 /* WeekTableViewCell.swift in Sources */,
+				8434C4A424E6C9E800130FC2 /* HourlyCollectionViewCell.swift in Sources */,
 				843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */,
 				84FED6B324E2CF1C0031B502 /* PSATest.xcdatamodeld in Sources */,
 				8434C49824E61E8F00130FC2 /* HourlyTableViewCell.swift in Sources */,
@@ -374,6 +385,7 @@
 				84FED6AB24E2CF1C0031B502 /* SceneDelegate.swift in Sources */,
 				843B653024E47E9F00036A60 /* CityTableViewCell.swift in Sources */,
 				8434C49C24E6BEA900130FC2 /* ForcastViewController.swift in Sources */,
+				8434C4A024E6C75800130FC2 /* DayCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
