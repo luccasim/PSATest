@@ -18,6 +18,8 @@
 		8434C4A924E6F88200130FC2 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4A824E6F88200130FC2 /* AddCityViewModel.swift */; };
 		8434C4AB24E6F8E500130FC2 /* ListCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4AA24E6F8E500130FC2 /* ListCityViewModel.swift */; };
 		8434C4AD24E6FA7100130FC2 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4AC24E6FA7100130FC2 /* Context.swift */; };
+		8434C4AF24E702EA00130FC2 /* ForcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4AE24E702EA00130FC2 /* ForcastViewModel.swift */; };
+		8434C4B124E7030F00130FC2 /* MetricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4B024E7030F00130FC2 /* MetricsViewModel.swift */; };
 		843B652824E47A5900036A60 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652724E47A5900036A60 /* ListViewController.swift */; };
 		843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652924E47A6C00036A60 /* AddCityViewController.swift */; };
 		843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652B24E47C3D00036A60 /* DetailViewController.swift */; };
@@ -63,6 +65,8 @@
 		8434C4A824E6F88200130FC2 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		8434C4AA24E6F8E500130FC2 /* ListCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCityViewModel.swift; sourceTree = "<group>"; };
 		8434C4AC24E6FA7100130FC2 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		8434C4AE24E702EA00130FC2 /* ForcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastViewModel.swift; sourceTree = "<group>"; };
+		8434C4B024E7030F00130FC2 /* MetricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewModel.swift; sourceTree = "<group>"; };
 		843B652724E47A5900036A60 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		843B652924E47A6C00036A60 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		843B652B24E47C3D00036A60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				8434C4A624E6DD9D00130FC2 /* DetailViewModel.swift */,
 				8434C4A824E6F88200130FC2 /* AddCityViewModel.swift */,
 				8434C4AA24E6F8E500130FC2 /* ListCityViewModel.swift */,
+				8434C4AE24E702EA00130FC2 /* ForcastViewModel.swift */,
+				8434C4B024E7030F00130FC2 /* MetricsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -395,9 +401,11 @@
 			files = (
 				8434C4AD24E6FA7100130FC2 /* Context.swift in Sources */,
 				8434C49E24E6BEC000130FC2 /* MetricsViewController.swift in Sources */,
+				8434C4B124E7030F00130FC2 /* MetricsViewModel.swift in Sources */,
 				8434C4A224E6C79E00130FC2 /* WeekTableViewCell.swift in Sources */,
 				8434C4A424E6C9E800130FC2 /* HourlyCollectionViewCell.swift in Sources */,
 				8434C4AB24E6F8E500130FC2 /* ListCityViewModel.swift in Sources */,
+				8434C4AF24E702EA00130FC2 /* ForcastViewModel.swift in Sources */,
 				843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */,
 				84FED6B324E2CF1C0031B502 /* PSATest.xcdatamodeld in Sources */,
 				8434C4A924E6F88200130FC2 /* AddCityViewModel.swift in Sources */,

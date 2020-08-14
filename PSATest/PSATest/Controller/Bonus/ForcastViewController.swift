@@ -12,7 +12,7 @@ class ForcastViewController: UIViewController {
 
     @IBOutlet weak var forcastTableView: UITableView!
     
-    var data : [Int] = [1,1,1,1,1,1]
+    let vm = ForcastViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +51,9 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
                 fatalError()
             }
             
-            cell.dayLabel.text      = "Lundi"
-            cell.tempMaxLabel.text  = "34"
-            cell.tempMinLabel.text  = "19"
+            cell.dayLabel.text      = self.vm.day
+            cell.tempMaxLabel.text  = self.vm.tempMax
+            cell.tempMinLabel.text  = self.vm.tempMin
             
             return cell
             
@@ -63,7 +63,7 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
                 fatalError()
             }
             
-            cell.data = [1,2,3]
+            cell.data = self.vm.hourlyData
             
             return cell
             
@@ -73,10 +73,10 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
                 fatalError()
             }
             
-            cell.dayLabel.text = "Mardi"
-            cell.iconImage.image = UIImage(named: "02n")
-            cell.tempMaxLabel.text = "24"
-            cell.tempMinLabel.text = "12"
+            cell.dayLabel.text = self.vm.getDay(Index: indexPath.row)
+            cell.iconImage.image = self.vm.getIcon(Index: indexPath.row)
+            cell.tempMaxLabel.text = self.vm.getTempMax(Index: indexPath.row)
+            cell.tempMinLabel.text = self.vm.getTempMin(Index: indexPath.row)
                         
             return cell
             
