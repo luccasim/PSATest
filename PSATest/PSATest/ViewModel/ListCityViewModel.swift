@@ -26,4 +26,8 @@ class ListCityViewModel {
         self.context.selectedCity = self.data[Index]
     }
     
+    func removeCity(Index:Int) {
+        self.context.cityList.remove(at: Index)
+    }
+    
 }
