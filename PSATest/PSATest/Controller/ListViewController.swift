@@ -12,8 +12,8 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var townTableView: UITableView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
-    
-    let data : [String] = ["Paris", "London", "Madrid", "Rome", "Berlin"]
+        
+    let vm = ListCityViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,10 @@ class ListViewController: UIViewController {
         
         self.townTableView.delegate = self
         self.townTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.vm.unselectCity()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,7 +35,8 @@ class ListViewController: UIViewController {
         case "pushToDetail":
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int {
-                vc?.title = self.data[index]
+                vc?.title = self.vm.data[index]
+                self.vm.selectCity(Index: index)
             }
         default:    break
         }
@@ -41,7 +46,7 @@ class ListViewController: UIViewController {
 extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.vm.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,7 +55,7 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
             fatalError("This pattern disappear with SwiftUI!, of course this cell exist...")
         }
         
-        cell.townNameLabel.text = self.data[indexPath.row]
+        cell.townNameLabel.text = self.vm.data[indexPath.row]
         
         return cell
     }

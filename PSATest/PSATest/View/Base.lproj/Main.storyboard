@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-FQ-aJu">
-                                <rect key="frame" x="0.0" y="-17" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="13" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <searchBar key="tableFooterView" contentMode="redraw" text="" id="bEy-nd-nGx">
                                     <rect key="frame" x="0.0" y="126" width="414" height="44"/>
@@ -169,7 +169,7 @@
                             <constraint firstItem="pjc-FQ-aJu" firstAttribute="centerX" secondItem="8QE-ph-XUB" secondAttribute="centerX" id="RHq-Hg-CcY"/>
                             <constraint firstItem="pjc-FQ-aJu" firstAttribute="height" secondItem="tc8-yk-OTg" secondAttribute="height" id="Vag-Qu-2t3"/>
                             <constraint firstItem="pjc-FQ-aJu" firstAttribute="width" secondItem="tc8-yk-OTg" secondAttribute="width" id="XJQ-ee-TnA"/>
-                            <constraint firstItem="pjc-FQ-aJu" firstAttribute="centerY" secondItem="8QE-ph-XUB" secondAttribute="centerY" id="kXq-Ej-YXj"/>
+                            <constraint firstItem="pjc-FQ-aJu" firstAttribute="centerY" secondItem="8QE-ph-XUB" secondAttribute="centerY" constant="30" id="kXq-Ej-YXj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8QE-ph-XUB"/>
                     </view>
