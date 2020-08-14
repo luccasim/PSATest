@@ -20,6 +20,8 @@
 		8434C4AD24E6FA7100130FC2 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4AC24E6FA7100130FC2 /* Context.swift */; };
 		8434C4AF24E702EA00130FC2 /* ForcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4AE24E702EA00130FC2 /* ForcastViewModel.swift */; };
 		8434C4B124E7030F00130FC2 /* MetricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C4B024E7030F00130FC2 /* MetricsViewModel.swift */; };
+		8434C4B424E7460900130FC2 /* OpenWeatherFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8434C4B224E745F900130FC2 /* OpenWeatherFramework.framework */; };
+		8434C4B524E7460900130FC2 /* OpenWeatherFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8434C4B224E745F900130FC2 /* OpenWeatherFramework.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		843B652824E47A5900036A60 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652724E47A5900036A60 /* ListViewController.swift */; };
 		843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652924E47A6C00036A60 /* AddCityViewController.swift */; };
 		843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652B24E47C3D00036A60 /* DetailViewController.swift */; };
@@ -53,6 +55,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8434C4B624E7460900130FC2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8434C4B524E7460900130FC2 /* OpenWeatherFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8434C48C24E5FD6000130FC2 /* Bonus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bonus.storyboard; sourceTree = "<group>"; };
 		8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +83,7 @@
 		8434C4AC24E6FA7100130FC2 /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		8434C4AE24E702EA00130FC2 /* ForcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastViewModel.swift; sourceTree = "<group>"; };
 		8434C4B024E7030F00130FC2 /* MetricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewModel.swift; sourceTree = "<group>"; };
+		8434C4B224E745F900130FC2 /* OpenWeatherFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenWeatherFramework.framework; sourceTree = "<group>"; };
 		843B652724E47A5900036A60 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		843B652924E47A6C00036A60 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		843B652B24E47C3D00036A60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8434C4B424E7460900130FC2 /* OpenWeatherFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +236,7 @@
 			children = (
 				843B653324E4A9D200036A60 /* README.md */,
 				843B653124E4A9B800036A60 /* Test_iOS_EN.pdf */,
+				8434C4B224E745F900130FC2 /* OpenWeatherFramework.framework */,
 				84FED6A724E2CF1C0031B502 /* PSATest */,
 				84FED6C124E2CF1D0031B502 /* PSATestTests */,
 				84FED6CC24E2CF1D0031B502 /* PSATestUITests */,
@@ -275,6 +294,7 @@
 				84FED6A124E2CF1C0031B502 /* Sources */,
 				84FED6A224E2CF1C0031B502 /* Frameworks */,
 				84FED6A324E2CF1C0031B502 /* Resources */,
+				8434C4B624E7460900130FC2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -592,6 +612,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32DX3M943S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PSATest/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,6 +634,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32DX3M943S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/PSATest/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

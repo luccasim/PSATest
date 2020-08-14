@@ -7,19 +7,33 @@
 //
 
 import Foundation
+import OpenWeatherFramework
 
 final class AddCityViewModel {
     
     private var context = Context.shared
+    private var ws = OpenWeatherWS(APIKey: "49e6a41dfca8bdde9592c1272dca877d", Session: URLSession.init(configuration: .default))
     
     var data : [String] = []
     
     func search(CityName:String, Result: @escaping ((Bool)->())) {
         
-        //Here call Webservice
-        self.data.append(CityName)
-        Result(true)
-        
+        self.ws.weatherTask(CityName: CityName) { (result) in
+            
+            switch result {
+
+            case .failure(let error):
+                
+                print(error.localizedDescription)
+                DispatchQueue.main.async {Result(false)}
+                
+            case .success(let reponse):
+                
+                print(reponse)
+                self.data.append(CityName)
+                DispatchQueue.main.async {Result(true)}
+            }
+        }
     }
     
     func add(Index:Int) {

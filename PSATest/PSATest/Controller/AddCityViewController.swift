@@ -24,7 +24,6 @@ class AddCityViewController: UIViewController {
         
         self.searchBar.delegate = self
     }
-    
 }
 
 extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
@@ -48,6 +47,7 @@ extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
         
         self.vm.add(Index: indexPath.row)
         self.navigationController?.popViewController(animated: true)
+        
     }
 }
 
