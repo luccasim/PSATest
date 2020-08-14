@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8434C48D24E5FD6000130FC2 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8434C48C24E5FD6000130FC2 /* Detail.storyboard */; };
+		8434C49824E61E8F00130FC2 /* HourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */; };
+		8434C49C24E6BEA900130FC2 /* ForcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */; };
+		8434C49E24E6BEC000130FC2 /* MetricsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */; };
 		843B652824E47A5900036A60 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652724E47A5900036A60 /* ListViewController.swift */; };
-		843B652A24E47A6C00036A60 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652924E47A6C00036A60 /* SearchViewController.swift */; };
+		843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652924E47A6C00036A60 /* AddCityViewController.swift */; };
 		843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652B24E47C3D00036A60 /* DetailViewController.swift */; };
-		843B653024E47E9F00036A60 /* TownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652F24E47E9F00036A60 /* TownTableViewCell.swift */; };
+		843B653024E47E9F00036A60 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B652F24E47E9F00036A60 /* CityTableViewCell.swift */; };
 		843B653224E4A9B800036A60 /* Test_iOS_EN.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 843B653124E4A9B800036A60 /* Test_iOS_EN.pdf */; };
 		843B653424E4A9D300036A60 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 843B653324E4A9D200036A60 /* README.md */; };
 		84FED6A924E2CF1C0031B502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FED6A824E2CF1C0031B502 /* AppDelegate.swift */; };
@@ -41,10 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8434C48C24E5FD6000130FC2 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTableViewCell.swift; sourceTree = "<group>"; };
+		8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastViewController.swift; sourceTree = "<group>"; };
+		8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewController.swift; sourceTree = "<group>"; };
 		843B652724E47A5900036A60 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		843B652924E47A6C00036A60 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		843B652924E47A6C00036A60 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
 		843B652B24E47C3D00036A60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		843B652F24E47E9F00036A60 /* TownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownTableViewCell.swift; sourceTree = "<group>"; };
+		843B652F24E47E9F00036A60 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		843B653124E4A9B800036A60 /* Test_iOS_EN.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test_iOS_EN.pdf; sourceTree = "<group>"; };
 		843B653324E4A9D200036A60 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		84FED6A524E2CF1C0031B502 /* PSATest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSATest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,12 +96,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8434C49624E61D5800130FC2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8434C49724E61E8F00130FC2 /* HourlyTableViewCell.swift */,
+				843B652F24E47E9F00036A60 /* CityTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8434C49924E6B2AA00130FC2 /* Bonus */ = {
+			isa = PBXGroup;
+			children = (
+				8434C49B24E6BEA900130FC2 /* ForcastViewController.swift */,
+				8434C49D24E6BEC000130FC2 /* MetricsViewController.swift */,
+			);
+			path = Bonus;
+			sourceTree = "<group>";
+		};
+		8434C49A24E6B48E00130FC2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		8467644C24E5E564000A80A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				843B652924E47A6C00036A60 /* SearchViewController.swift */,
+				8434C49624E61D5800130FC2 /* Cells */,
+				8434C49924E6B2AA00130FC2 /* Bonus */,
+				843B652924E47A6C00036A60 /* AddCityViewController.swift */,
 				843B652724E47A5900036A60 /* ListViewController.swift */,
-				843B652F24E47E9F00036A60 /* TownTableViewCell.swift */,
 				843B652B24E47C3D00036A60 /* DetailViewController.swift */,
 			);
 			path = Controller;
@@ -103,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				84FED6AE24E2CF1C0031B502 /* Main.storyboard */,
+				8434C48C24E5FD6000130FC2 /* Detail.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				8467645124E5EBF0000A80A6 /* App Management */,
+				8434C49A24E6B48E00130FC2 /* Shared */,
 				8467645024E5E84A000A80A6 /* CoreData */,
 			);
 			path = Model;
@@ -301,6 +337,7 @@
 				84FED6B824E2CF1D0031B502 /* LaunchScreen.storyboard in Resources */,
 				84FED6B524E2CF1D0031B502 /* Assets.xcassets in Resources */,
 				843B653424E4A9D300036A60 /* README.md in Resources */,
+				8434C48D24E5FD6000130FC2 /* Detail.storyboard in Resources */,
 				84FED6B024E2CF1C0031B502 /* Main.storyboard in Resources */,
 				843B653224E4A9B800036A60 /* Test_iOS_EN.pdf in Resources */,
 			);
@@ -327,13 +364,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843B652A24E47A6C00036A60 /* SearchViewController.swift in Sources */,
+				8434C49E24E6BEC000130FC2 /* MetricsViewController.swift in Sources */,
+				843B652A24E47A6C00036A60 /* AddCityViewController.swift in Sources */,
 				84FED6B324E2CF1C0031B502 /* PSATest.xcdatamodeld in Sources */,
+				8434C49824E61E8F00130FC2 /* HourlyTableViewCell.swift in Sources */,
 				84FED6A924E2CF1C0031B502 /* AppDelegate.swift in Sources */,
 				843B652C24E47C3D00036A60 /* DetailViewController.swift in Sources */,
 				843B652824E47A5900036A60 /* ListViewController.swift in Sources */,
 				84FED6AB24E2CF1C0031B502 /* SceneDelegate.swift in Sources */,
-				843B653024E47E9F00036A60 /* TownTableViewCell.swift in Sources */,
+				843B653024E47E9F00036A60 /* CityTableViewCell.swift in Sources */,
+				8434C49C24E6BEA900130FC2 /* ForcastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,7 +548,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32DX3M943S;
-				INFOPLIST_FILE = PSATest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PSATest/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 32DX3M943S;
-				INFOPLIST_FILE = PSATest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PSATest/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -16,18 +16,17 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var sepView: UIView!
     
-    @IBOutlet weak var informationsCollectionView: UICollectionView!
+    @IBOutlet weak var informationView: UIView!
     
-    @IBOutlet weak var informationFlowLayout: UICollectionViewFlowLayout!
     
     var data : [String] = ["weekly", "informations"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        
     }
     
     
-
 }

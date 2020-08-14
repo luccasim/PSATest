@@ -31,7 +31,7 @@ class ListViewController: UIViewController {
         case "pushToDetail":
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int {
-                vc?.data = self.data[index]
+                vc?.title = self.data[index]
             }
         default:    break
         }
@@ -46,7 +46,7 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell") as? TownTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell") as? CityTableViewCell else {
             fatalError("This pattern disappear with SwiftUI!, of course this cell exist...")
         }
         

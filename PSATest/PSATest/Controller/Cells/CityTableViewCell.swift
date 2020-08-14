@@ -1,5 +1,5 @@
 //
-//  TownTableViewCell.swift
+//  CityTableViewCell.swift
 //  PSATest
 //
 //  Created by owee on 12/08/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TownTableViewCell: UITableViewCell {
+class CityTableViewCell: UITableViewCell {
 
     @IBOutlet weak var weatherImage: UIImageView! {
         didSet {

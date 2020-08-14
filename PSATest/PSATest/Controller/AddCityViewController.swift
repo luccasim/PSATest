@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  AddCityViewController.swift
 //  PSATest
 //
 //  Created by owee on 12/08/2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class AddCityViewController: UIViewController {
 
     @IBOutlet weak var resultTableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -28,7 +28,7 @@ class SearchViewController: UIViewController {
     
 }
 
-extension SearchViewController : UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+extension AddCityViewController : UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -44,7 +44,7 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource, UIS
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell") as? TownTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell") as? CityTableViewCell else {
             fatalError()
         }
         
