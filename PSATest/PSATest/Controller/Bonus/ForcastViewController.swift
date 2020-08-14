@@ -51,6 +51,10 @@ extension ForcastViewController : UITableViewDataSource, UITableViewDelegate  {
                 fatalError()
             }
             
+            cell.dayLabel.text      = "Sunday"
+            cell.tempMaxLabel.text  = "34"
+            cell.tempMinLabel.text  = "19"
+            
             return cell
             
         case 1:
