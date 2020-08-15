@@ -13,15 +13,15 @@ class DetailViewModel {
     private var context = Context.shared
     
     var main : String {
-        return "Pluie"
+        return context.selectedCity?.main ?? ""
     }
     
     var description : String {
-        return "Couvert et humide"
+        return context.selectedCity?.desc ?? ""
     }
     
     var temp : String {
-        return "19"
+        return context.selectedCity?.temperature.description ?? ""
     }
     
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ListCityViewModel {
     
@@ -28,6 +29,10 @@ class ListCityViewModel {
     
     func removeCity(Index:Int) {
         self.context.cityList.remove(at: Index)
+    }
+    
+    func saveContext() {
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
 }

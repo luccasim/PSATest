@@ -26,6 +26,7 @@ class ListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.vm.unselectCity()
         self.townTableView.reloadData()
+        self.vm.saveContext()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,7 +37,7 @@ class ListViewController: UIViewController {
         case "pushToDetail":
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int {
-//                vc?.title = self.vm.data[index]
+                vc?.title = self.vm.data[index].name
                 self.vm.selectCity(Index: index)
             }
         default:    break
@@ -56,7 +57,9 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
             fatalError("This pattern disappear with SwiftUI!, of course this cell exist...")
         }
         
-//        cell.townNameLabel.text = self.vm.data[indexPath.row]
+        cell.townNameLabel.text = self.vm.data[indexPath.row].name
+        cell.townTempLabel.text = self.vm.data[indexPath.row].temperature.description
+        cell.weatherImage.image = UIImage(named: self.vm.data[indexPath.row].icon ?? "")
         
         return cell
     }
