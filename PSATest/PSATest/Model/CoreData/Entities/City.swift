@@ -98,8 +98,8 @@ class City : NSManagedObject {
 
 extension Double {
     
-    var toDegree : String {
-        return self.description + "°"
+    var toInt : String {
+        return Int(self).description
     }
     
     var toIntDegree : String {

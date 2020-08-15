@@ -26,11 +26,11 @@ final class ForcastViewModel {
     }
     
     var tempMax     : String {
-        return self.context.selectedCity?.tempMax.toIntDegree ?? ""
+        return self.context.selectedCity?.tempMax.toInt ?? ""
     }
     
     var tempMin     : String {
-        return self.context.selectedCity?.tempMin.toIntDegree ?? ""
+        return self.context.selectedCity?.tempMin.toInt ?? ""
     }
     
     func getDay(Index:Int) -> String {
@@ -42,11 +42,11 @@ final class ForcastViewModel {
     }
     
     func getTempMax(Index:Int) -> String {
-        return self.daysData[Index].tempMax.toIntDegree
+        return self.daysData[Index].tempMax.toInt
     }
     
     func getTempMin(Index:Int) -> String {
-        return self.daysData[Index].tempMin.toIntDegree
+        return self.daysData[Index].tempMin.toInt
     }
     
 }

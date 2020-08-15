@@ -41,7 +41,7 @@ class ListViewController: UIViewController {
         case "pushToDetail":
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int {
-                vc?.title = self.vm.data[index].name
+                vc?.title = self.vm.nameFor(Index: index)
                 self.vm.selectCity(Index: index)
             }
         default:    break
@@ -52,7 +52,7 @@ class ListViewController: UIViewController {
 extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.vm.data.count
+        return self.vm.dataCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,10 +60,10 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TownCell") as? CityTableViewCell else {
             fatalError("This pattern disappear with SwiftUI!, of course this cell exist...")
         }
-        
-        cell.townNameLabel.text = self.vm.data[indexPath.row].name
-        cell.townTempLabel.text = self.vm.data[indexPath.row].temperature.description
-        cell.weatherImage.image = UIImage(named: self.vm.data[indexPath.row].icon ?? "")
+                
+        cell.townNameLabel.text = self.vm.nameFor(Index: indexPath.row)
+        cell.townTempLabel.text = self.vm.temperatureFor(Index: indexPath.row)
+        cell.weatherImage.image = self.vm.iconFor(Index: indexPath.row)
         
         return cell
     }

@@ -47,7 +47,7 @@ extension Int64 {
     
     var toDate : String {
         let formater = DateFormatter()
-        formater.dateFormat = "HH:mm:ss"
+        formater.dateFormat = "HH:mm"
         let time = TimeInterval(self)
         let date = Date(timeIntervalSince1970: time)
         return formater.string(from: date)

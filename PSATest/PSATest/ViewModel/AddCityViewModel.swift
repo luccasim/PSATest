@@ -42,6 +42,12 @@ final class AddCityViewModel {
     }
     
     func add(Index:Int) {
-        self.context.cityList.append(self.data[Index])
+        
+        let city = self.data[Index]
+        
+        // Insert City only if he doesn't exist.
+        if false == self.context.cityList.contains(where: {$0.name == city.name}) {
+            self.context.cityList.append(city)
+        }
     }
 }

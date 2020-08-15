@@ -15,8 +15,12 @@ class ListCityViewModel {
     private var context = Context.shared
     private var ws = OpenWeatherWS(APIKey: "49e6a41dfca8bdde9592c1272dca877d", Session: URLSession.init(configuration: .default))
     
-    var data : [City] {
+    private var data : [City] {
         return context.cityList
+    }
+    
+    var dataCount : Int {
+        return self.data.count
     }
     
     func unselectCity() {
@@ -33,6 +37,18 @@ class ListCityViewModel {
     
     func saveContext() {
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
+    }
+    
+    func nameFor(Index:Int) -> String {
+        return self.data[Index].name ?? ""
+    }
+    
+    func temperatureFor(Index:Int) -> String {
+        return self.data[Index].temperature.toInt
+    }
+    
+    func iconFor(Index:Int) -> UIImage? {
+        return UIImage(named: self.data[Index].icon ?? "01d")
     }
     
     private var group = DispatchGroup()
