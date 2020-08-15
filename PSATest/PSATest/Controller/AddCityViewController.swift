@@ -21,7 +21,6 @@ class AddCityViewController: UIViewController {
         
         self.resultTableView.delegate = self
         self.resultTableView.dataSource = self
-        
         self.searchBar.delegate = self
     }
 }
@@ -29,7 +28,7 @@ class AddCityViewController: UIViewController {
 extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.vm.data.count
+        self.vm.dataCount
     }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,16 +37,16 @@ extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
             fatalError()
         }
         
-        cell.townNameLabel.text = self.vm.data[indexPath.row].name
-        cell.townTempLabel.text = self.vm.data[indexPath.row].temperature.description
-        cell.weatherImage.image = UIImage(named: self.vm.data[indexPath.row].icon ?? "01d")
+        cell.townNameLabel.text = self.vm.nameFor(Index: indexPath.row)
+        cell.townTempLabel.text = self.vm.temperatureFor(Index: indexPath.row)
+        cell.weatherImage.image = self.vm.iconFor(Index: indexPath.row)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        self.vm.add(Index: indexPath.row)
+        self.vm.insertToContext(Index: indexPath.row)
         self.navigationController?.popViewController(animated: true)
     }
 }

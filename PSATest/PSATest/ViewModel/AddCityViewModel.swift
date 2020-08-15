@@ -8,13 +8,18 @@
 
 import Foundation
 import OpenWeatherFramework
+import UIKit
 
 final class AddCityViewModel {
     
     private var context = Context.shared
     private var ws = OpenWeatherWS(APIKey: "49e6a41dfca8bdde9592c1272dca877d", Session: URLSession.init(configuration: .default))
     
-    var data : [City] = []
+    private var data : [City] = []
+    
+    var dataCount : Int {
+        return self.data.count
+    }
     
     func search(CityName:String, Result: @escaping ((Bool)->())) {
         
@@ -41,7 +46,7 @@ final class AddCityViewModel {
         }
     }
     
-    func add(Index:Int) {
+    func insertToContext(Index:Int) {
         
         let city = self.data[Index]
         
@@ -50,4 +55,17 @@ final class AddCityViewModel {
             self.context.cityList.append(city)
         }
     }
+    
+    func nameFor(Index:Int) -> String {
+        return self.data[Index].name ?? ""
+    }
+    
+    func temperatureFor(Index:Int) -> String {
+        return self.data[Index].temperature.toInt
+    }
+    
+    func iconFor(Index:Int) -> UIImage? {
+        return UIImage(named: self.data[Index].icon ?? "01d")
+    }
+    
 }
