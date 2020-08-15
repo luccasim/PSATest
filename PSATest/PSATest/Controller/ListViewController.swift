@@ -24,9 +24,13 @@ class ListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         self.vm.unselectCity()
-        self.townTableView.reloadData()
         self.vm.saveContext()
+        
+        self.vm.updates {
+            self.townTableView.reloadData()
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

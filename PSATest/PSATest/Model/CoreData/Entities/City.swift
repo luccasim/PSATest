@@ -76,6 +76,11 @@ class City : NSManagedObject {
         self.country = Reponse.sys.country
     }
     
+    func update(OneCallReponse reponse:OpenWeatherWS.OneCallReponse) {
+
+        
+    }
+    
 }
 
 extension Double {
