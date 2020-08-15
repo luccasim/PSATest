@@ -77,8 +77,22 @@ class City : NSManagedObject {
     }
     
     func update(OneCallReponse reponse:OpenWeatherWS.OneCallReponse) {
-
         
+        guard let context = self.managedObjectContext else {return}
+        
+        reponse.hourly.forEach { (hourly) in
+            let hour = Hour(context: context)
+            hour.set(OneCallReponse: hourly)
+            self.addToHours(hour)
+        }
+        
+        reponse.daily.forEach { (daily) in
+            let day = Day(context: context)
+            day.set(OneCallReponse: daily)
+            self.addToDays(day)
+        }
+        
+        self.uvi = reponse.current.uvi
     }
     
 }
