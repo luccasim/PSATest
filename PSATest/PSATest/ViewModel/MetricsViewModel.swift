@@ -18,12 +18,12 @@ final class MetricsViewModel {
         
         if let city = self.context.selectedCity {
             
-            self.data.append((Title:"Lever", Value: city.sunrise.description))
-            self.data.append((Title:"Coucher", Value: city.sunset.description))
+            self.data.append((Title:"Lever", Value: city.sunrise.toDate))
+            self.data.append((Title:"Coucher", Value: city.sunset.toDate))
             self.data.append((Title:"Humidité", Value: city.humidity.description))
             self.data.append((Title:"Risque de pluie", Value: "-"))
             self.data.append((Title:"Vent", Value: city.windSpeed.description))
-            self.data.append((Title:"Ressenti", Value: city.feelslike.description))
+            self.data.append((Title:"Ressenti", Value: city.feelslike.toIntDegree))
             self.data.append((Title:"Précipitation", Value: "-"))
             self.data.append((Title:"Pression", Value: city.pressure.description))
             self.data.append((Title:"Visibilité", Value: city.visibility.description))
@@ -41,4 +41,15 @@ final class MetricsViewModel {
     }
     
     
+}
+
+extension Int64 {
+    
+    var toDate : String {
+        let formater = DateFormatter()
+        formater.dateFormat = "HH:mm:ss"
+        let time = TimeInterval(self)
+        let date = Date(timeIntervalSince1970: time)
+        return formater.string(from: date)
+    }
 }

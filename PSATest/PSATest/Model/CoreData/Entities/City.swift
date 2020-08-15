@@ -77,3 +77,14 @@ class City : NSManagedObject {
     }
     
 }
+
+extension Double {
+    
+    var toDegree : String {
+        return self.description + "°"
+    }
+    
+    var toIntDegree : String {
+        return Int(self).description + "°"
+    }
+}

@@ -12,7 +12,7 @@
         <!--Forcast Pattern-->
         <scene sceneID="CHu-Pf-gN9">
             <objects>
-                <tableViewController id="mVX-Hf-Xh9" userLabel="Forcast Pattern" customClass="ForcastTableViewController" customModule="PSATest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mVX-Hf-Xh9" userLabel="Forcast Pattern" customClass="ForcastTableViewController" customModule="PSA_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="10" id="btk-we-S2D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Hours" id="r1C-vn-ZI7">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="QHH-Wo-1vL" customClass="HourlyTableViewCell" customModule="PSATest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="116" id="QHH-Wo-1vL" customClass="HourlyTableViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="149" width="414" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QHH-Wo-1vL" id="5bS-cv-DZG">
@@ -499,7 +499,7 @@
         <!--Forcast-->
         <scene sceneID="vbc-sx-kOc">
             <objects>
-                <viewController id="YM6-9D-jN2" userLabel="Forcast" customClass="ForcastViewController" customModule="PSATest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YM6-9D-jN2" userLabel="Forcast" customClass="ForcastViewController" customModule="PSA_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUG-XA-hFF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,7 +508,7 @@
                                 <rect key="frame" x="0.0" y="10.5" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DayCell" rowHeight="65" id="RkZ-du-hfH" customClass="DayCellTableViewCell" customModule="PSATest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DayCell" rowHeight="65" id="RkZ-du-hfH" customClass="DayCellTableViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RkZ-du-hfH" id="3Wa-yO-Lb6">
@@ -519,29 +519,29 @@
                                                     <rect key="frame" x="24" y="0.0" width="366" height="65"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mardi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyM-7G-Ui6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="65"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="248" height="65"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="IYo-gQ-1mE">
-                                                            <rect key="frame" x="276" y="0.0" width="90" height="65"/>
+                                                            <rect key="frame" x="256" y="0.0" width="110" height="65"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5a-wq-szT">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="65"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="65"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-hc-mnx">
-                                                                    <rect key="frame" x="48" y="0.0" width="42" height="65"/>
+                                                                    <rect key="frame" x="58" y="0.0" width="52" height="65"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                                     <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="90" id="pZD-ar-1cO"/>
+                                                                <constraint firstAttribute="width" constant="110" id="pZD-ar-1cO" userLabel="width = 110"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -560,7 +560,7 @@
                                             <outlet property="tempMinLabel" destination="jiB-hc-mnx" id="uo8-b3-AlF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyCell" rowHeight="116" id="GV1-K8-pgU" customClass="HourlyTableViewCell" customModule="PSATest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyCell" rowHeight="116" id="GV1-K8-pgU" customClass="HourlyTableViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="93" width="414" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GV1-K8-pgU" id="w8p-fR-wp8">
@@ -577,7 +577,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="8yq-Q3-PDF" customClass="HourlyCollectionViewCell" customModule="PSATest" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="8yq-Q3-PDF" customClass="HourlyCollectionViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="-1" width="85" height="118"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3P7-ga-D59">
@@ -639,7 +639,7 @@
                                             <outlet property="hourCollectionView" destination="pT6-rR-w3C" id="I2f-kH-uDw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeekCell" rowHeight="65" id="P3d-xL-Foy" customClass="WeekTableViewCell" customModule="PSATest" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeekCell" rowHeight="65" id="P3d-xL-Foy" customClass="WeekTableViewCell" customModule="PSA_Weather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="209" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P3d-xL-Foy" id="5Dh-DH-zn3">
@@ -657,29 +657,29 @@
                                                     <rect key="frame" x="24" y="0.0" width="366" height="65"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mardi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZR-gG-M5Y">
-                                                            <rect key="frame" x="0.0" y="0.0" width="268" height="65"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="248" height="65"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="n3X-Ve-Huk">
-                                                            <rect key="frame" x="276" y="0.0" width="90" height="65"/>
+                                                            <rect key="frame" x="256" y="0.0" width="110" height="65"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDc-MV-yxi">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="65"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="65"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4y-nr-4qr">
-                                                                    <rect key="frame" x="48" y="0.0" width="42" height="65"/>
+                                                                    <rect key="frame" x="58" y="0.0" width="52" height="65"/>
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                                     <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="90" id="thy-nK-q2R"/>
+                                                                <constraint firstAttribute="width" constant="110" id="thy-nK-q2R"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -745,7 +745,7 @@
         <!--Metrics-->
         <scene sceneID="nRC-xa-qpn">
             <objects>
-                <viewController id="Avg-Fb-faZ" userLabel="Metrics" customClass="MetricsViewController" customModule="PSATest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Avg-Fb-faZ" userLabel="Metrics" customClass="MetricsViewController" customModule="PSA_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uAF-E2-wLF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

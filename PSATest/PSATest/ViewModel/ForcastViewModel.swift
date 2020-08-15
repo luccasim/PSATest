@@ -13,20 +13,16 @@ final class ForcastViewModel {
     
     private let context = Context.shared
     
-    private var selectedCity : String {
-        return context.selectedCity?.name ?? ""
-    }
-    
     var day         : String {
-        return self.selectedCity
+        return "Lundi"
     }
     
     var tempMax     : String {
-        return "XX"
+        return self.context.selectedCity?.tempMax.toIntDegree ?? ""
     }
     
     var tempMin     : String {
-        return "XX"
+        return self.context.selectedCity?.tempMin.toIntDegree ?? ""
     }
     
     var hourlyData  : [Int] {

@@ -21,7 +21,7 @@ class DetailViewModel {
     }
     
     var temp : String {
-        return context.selectedCity?.temperature.description ?? ""
+        return context.selectedCity?.temperature.toIntDegree ?? ""
     }
     
 }
