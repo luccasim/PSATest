@@ -14,7 +14,7 @@ class ListCityViewModel {
         return Context.shared
     }
     
-    var data : [String] {
+    var data : [City] {
         return context.cityList
     }
     

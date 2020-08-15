@@ -38,7 +38,9 @@ extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
             fatalError()
         }
         
-        cell.townNameLabel.text = self.vm.data[indexPath.row]
+        cell.townNameLabel.text = self.vm.data[indexPath.row].name
+        cell.townTempLabel.text = self.vm.data[indexPath.row].temperature.description
+        cell.weatherImage.image = UIImage(named: self.vm.data[indexPath.row].icon ?? "01d")
         
         return cell
     }
@@ -47,7 +49,6 @@ extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
         
         self.vm.add(Index: indexPath.row)
         self.navigationController?.popViewController(animated: true)
-        
     }
 }
 

@@ -14,7 +14,7 @@ final class ForcastViewModel {
     private let context = Context.shared
     
     private var selectedCity : String {
-        return context.selectedCity ?? ""
+        return context.selectedCity?.name ?? ""
     }
     
     var day         : String {

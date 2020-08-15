@@ -36,7 +36,7 @@ class ListViewController: UIViewController {
         case "pushToDetail":
             let vc = segue.destination as? DetailViewController
             if let index = sender as? Int {
-                vc?.title = self.vm.data[index]
+//                vc?.title = self.vm.data[index]
                 self.vm.selectCity(Index: index)
             }
         default:    break
@@ -56,7 +56,7 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
             fatalError("This pattern disappear with SwiftUI!, of course this cell exist...")
         }
         
-        cell.townNameLabel.text = self.vm.data[indexPath.row]
+//        cell.townNameLabel.text = self.vm.data[indexPath.row]
         
         return cell
     }

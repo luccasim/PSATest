@@ -14,9 +14,11 @@ final class AddCityViewModel {
     private var context = Context.shared
     private var ws = OpenWeatherWS(APIKey: "49e6a41dfca8bdde9592c1272dca877d", Session: URLSession.init(configuration: .default))
     
-    var data : [String] = []
+    var data : [City] = []
     
     func search(CityName:String, Result: @escaping ((Bool)->())) {
+        
+        let newCity = City.fetch(Name:CityName)
         
         self.ws.weatherTask(CityName: CityName) { (result) in
             
@@ -28,10 +30,13 @@ final class AddCityViewModel {
                 DispatchQueue.main.async {Result(false)}
                 
             case .success(let reponse):
-                
-                print(reponse)
-                self.data.append(CityName)
-                DispatchQueue.main.async {Result(true)}
+                            
+                DispatchQueue.main.async {
+                    newCity.update(Reponse: reponse)
+                    self.data.removeAll()
+                    self.data.append(newCity)
+                    Result(true)
+                }
             }
         }
     }

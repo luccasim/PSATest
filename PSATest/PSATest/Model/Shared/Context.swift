@@ -10,16 +10,17 @@ import Foundation
 
 final class Context {
     
-    private init(){}
-    
-    static let shared = Context()
-    
-    var cityList : [String] = ["Paris", "London", "Madrid", "Rome", "Berlin"]
-    
-    var selectedCity : String? {
-        didSet {
-            print("\(self.selectedCity ?? "<None>") selected")
-        }
+    private init() {
+        self.cityList = City.fetchCities()
     }
     
+    static let shared = Context()
+        
+    var cityList : [City]
+    
+    var selectedCity : City? {
+        didSet {
+            print("\(self.selectedCity?.name ?? "<None>") selected")
+        }
+    }
 }
