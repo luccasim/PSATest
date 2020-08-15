@@ -17,7 +17,7 @@ class HourlyTableViewCell: UITableViewCell {
         }
     }
     
-    var data : [Int] = [1,2,3,4,5,6,7,8,9,0]
+    var data : [Hour] = []
     
 }
 
@@ -37,9 +37,11 @@ extension HourlyTableViewCell : UICollectionViewDelegate, UICollectionViewDataSo
             fatalError()
         }
         
-        cell.hourLabel.text = "15:56"
-        cell.iconImage.image = UIImage(named: "01n")
-        cell.tempLabel.text = "12"
+        let hour = self.data[indexPath.row]
+        
+        cell.hourLabel.text = hour.dt.toDate
+        cell.iconImage.image = UIImage(named: hour.icon ?? "01d")
+        cell.tempLabel.text = hour.temp.toIntDegree
         
         return cell
     }

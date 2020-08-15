@@ -20,6 +20,7 @@ class Day : NSManagedObject {
         self.tempDay    = reponse.temp.day
         self.sunrise    = Int64(reponse.sunrise)
         self.sunset     = Int64(reponse.sunset)
-        
+        self.icon       = reponse.weather[0].icon
+            
     }
 }

@@ -94,7 +94,6 @@ class City : NSManagedObject {
         
         self.uvi = reponse.current.uvi
     }
-    
 }
 
 extension Double {
@@ -105,5 +104,18 @@ extension Double {
     
     var toIntDegree : String {
         return Int(self).description + "°"
+    }
+}
+
+extension City {
+    
+    var sortedHours : [Hour] {
+        let hours = self.hours?.allObjects as? [Hour] ?? []
+        return hours.sorted(by: {$0.dt < $1.dt})
+    }
+    
+    var sortedDays : [Day] {
+        let days = self.days?.allObjects as? [Day] ?? []
+        return days.sorted(by: {$0.dt < $1.dt})
     }
 }

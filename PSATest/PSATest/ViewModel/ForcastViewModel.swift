@@ -13,6 +13,14 @@ final class ForcastViewModel {
     
     private let context = Context.shared
     
+    var daysData    : [Day]
+    var hourlyData  : [Hour]
+    
+    init() {
+        self.daysData = self.context.selectedCity?.sortedDays ?? []
+        self.hourlyData = self.context.selectedCity?.sortedHours ?? []
+    }
+    
     var day         : String {
         return "Lundi"
     }
@@ -25,24 +33,20 @@ final class ForcastViewModel {
         return self.context.selectedCity?.tempMin.toIntDegree ?? ""
     }
     
-    var hourlyData  : [Int] {
-        return [1,1,1,1]
-    }
-    
     func getDay(Index:Int) -> String {
-        return self.day + " 1"
+        return self.daysData[Index].dt.toDate
     }
 
     func getIcon(Index:Int) -> UIImage? {
-        return UIImage(named: "01n")
+        return UIImage(named: self.daysData[Index].icon ?? "01d")
     }
     
     func getTempMax(Index:Int) -> String {
-        return "20"
+        return self.daysData[Index].tempMax.toIntDegree
     }
     
     func getTempMin(Index:Int) -> String {
-        return "10"
+        return self.daysData[Index].tempMin.toIntDegree
     }
     
 }
