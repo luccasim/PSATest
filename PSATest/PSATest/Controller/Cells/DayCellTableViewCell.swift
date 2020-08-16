@@ -11,7 +11,6 @@ import UIKit
 class DayCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dayLabel: UILabel!
-    
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var tempMinLabel: UILabel!
 

@@ -10,12 +10,7 @@ import UIKit
 
 class CityTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var weatherImage: UIImageView! {
-        didSet {
-            self.weatherImage.image = UIImage(named: "01d")
-        }
-    }
-    
+    @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var townNameLabel: UILabel!
     @IBOutlet weak var townTempLabel: UILabel!
     

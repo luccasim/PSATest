@@ -12,7 +12,6 @@ class WeekTableViewCell: UITableViewCell {
 
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var dayLabel: UILabel!
-    
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var tempMinLabel: UILabel!
     
