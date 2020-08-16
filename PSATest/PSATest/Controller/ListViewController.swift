@@ -28,7 +28,6 @@ class ListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         self.vm.unselectCity()
-        self.vm.saveContext()
         
         self.vm.updates {
             self.townTableView.reloadData()
@@ -71,7 +70,10 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "pushToDetail", sender: indexPath.row)
+        
+        if self.vm.couldShowDetail(Index: indexPath.row) {
+            performSegue(withIdentifier: "pushToDetail", sender: indexPath.row)
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

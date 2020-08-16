@@ -36,7 +36,10 @@ class ListCityViewModel {
     }
     
     func removeCity(Index:Int) {
+        let cityToRemove = self.context.cityList[Index]
+        (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.delete(cityToRemove)
         self.context.cityList.remove(at: Index)
+        self.saveContext()
     }
     
     func saveContext() {
@@ -55,6 +58,10 @@ class ListCityViewModel {
         return UIImage(named: self.data[Index].icon ?? "01d")
     }
     
+    func couldShowDetail(Index:Int) -> Bool {
+        return self.data[Index].hasForecastDays
+    }
+    
     private var group = DispatchGroup()
     
     func fetchForcast(City:City) {
@@ -65,7 +72,10 @@ class ListCityViewModel {
             
             switch result {
             case .failure(let error): print(error.localizedDescription)
-            case .success(let reponse): City.update(OneCallReponse: reponse)
+            case .success(let reponse):
+                DispatchQueue.main.async {
+                    City.update(OneCallReponse: reponse)
+                }
             }
             
             self.group.leave()

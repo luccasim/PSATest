@@ -31,8 +31,6 @@ final class AddCityViewModel {
     
     func search(CityName:String, Result: @escaping ((Bool)->())) {
         
-        let newCity = City.fetch(Name:CityName)
-        
         self.ws.weatherTask(CityName: CityName) { (result) in
             
             switch result {
@@ -45,7 +43,10 @@ final class AddCityViewModel {
             case .success(let reponse):
                             
                 DispatchQueue.main.async {
+                    // Fetch a City, if the entity doesn't exist create one.
+                    let newCity = City.fetch(Name:CityName)
                     newCity.update(Reponse: reponse)
+                    
                     self.data.removeAll()
                     self.data.append(newCity)
                     Result(true)
@@ -61,6 +62,7 @@ final class AddCityViewModel {
         // Insert City only if he doesn't exist.
         if false == self.context.cityList.contains(where: {$0.name == city.name}) {
             self.context.cityList.append(city)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
         }
     }
     

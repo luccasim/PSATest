@@ -129,4 +129,9 @@ extension City {
         let days = self.days?.allObjects as? [Day] ?? []
         return days.sorted(by: {$0.dt < $1.dt})
     }
+    
+    var hasForecastDays : Bool {
+        return !self.sortedDays.isEmpty
+    }
+    
 }
