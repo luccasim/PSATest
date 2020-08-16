@@ -21,6 +21,8 @@ class ListViewController: UIViewController {
         
         self.townTableView.delegate = self
         self.townTableView.dataSource = self
+        
+        self.title = self.vm.title
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -19,6 +19,10 @@ class ListCityViewModel {
         return context.cityList
     }
     
+    var title : String {
+        return "Cities"
+    }
+    
     var dataCount : Int {
         return self.data.count
     }
@@ -56,9 +60,7 @@ class ListCityViewModel {
     func fetchForcast(City:City) {
         
         self.group.enter()
-        
-        print("Start fetch \(City.name!)")
-        
+                
         self.ws.oneCallTask(Coordinates: (Lon: City.lon, Lat: City.lat)) { (result) in
             
             switch result {
@@ -67,7 +69,6 @@ class ListCityViewModel {
             }
             
             self.group.leave()
-            print("End fecth \(City.name!)")
         }
     }
     
@@ -78,7 +79,6 @@ class ListCityViewModel {
         }
         
         self.group.notify(queue: .main) {
-            print("Finish")
             Complete()
         }
     }

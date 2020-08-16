@@ -18,16 +18,15 @@ final class MetricsViewModel {
         
         if let city = self.context.selectedCity {
             
-            self.data.append((Title:"Lever", Value: city.sunrise.toDate))
-            self.data.append((Title:"Coucher", Value: city.sunset.toDate))
-            self.data.append((Title:"Humidité", Value: city.humidity.description))
-            self.data.append((Title:"Risque de pluie", Value: "-"))
-            self.data.append((Title:"Vent", Value: city.windSpeed.description))
-            self.data.append((Title:"Ressenti", Value: city.feelslike.toIntDegree))
-            self.data.append((Title:"Précipitation", Value: "-"))
-            self.data.append((Title:"Pression", Value: city.pressure.description))
-            self.data.append((Title:"Visibilité", Value: city.visibility.description))
-            self.data.append((Title:"Indice UV", Value: "-"))
+            self.data.append((Title:"Sunrise", Value: city.sunrise.toDate))
+            self.data.append((Title:"Sunset", Value: city.sunset.toDate))
+            self.data.append((Title:"Humidity", Value: city.humidity.description))
+            self.data.append((Title:"Wind Speed", Value: city.windSpeed.description + " m/s"))
+            self.data.append((Title:"Feels like", Value: city.feelslike.toIntDegree))
+            self.data.append((Title:"Pressure", Value: city.pressure.description))
+            self.data.append((Title:"Visibilité", Value: city.visibility.toInt + " m"))
+            self.data.append((Title:"Clouds", Value: city.clouds.description + " %"))
+            self.data.append((Title:"UVI", Value: city.uvi.description))
             
         }
     }

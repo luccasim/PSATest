@@ -22,7 +22,7 @@ final class ForcastViewModel {
     }
     
     var day         : String {
-        return "Lundi"
+        return "Today"
     }
     
     var tempMax     : String {
@@ -34,7 +34,7 @@ final class ForcastViewModel {
     }
     
     func getDay(Index:Int) -> String {
-        return self.daysData[Index].dt.toDate
+        return self.daysData[Index].dt.toDay
     }
 
     func getIcon(Index:Int) -> UIImage? {
@@ -49,4 +49,15 @@ final class ForcastViewModel {
         return self.daysData[Index].tempMin.toInt
     }
     
+}
+
+fileprivate extension Int64 {
+    
+    var toDay : String {
+        let formater = DateFormatter()
+        formater.dateFormat = "EEEE"
+        let time = TimeInterval(self)
+        let date = Date(timeIntervalSince1970: time)
+        return formater.string(from: date)
+    }
 }

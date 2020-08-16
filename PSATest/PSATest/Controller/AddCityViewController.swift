@@ -22,6 +22,9 @@ class AddCityViewController: UIViewController {
         self.resultTableView.delegate = self
         self.resultTableView.dataSource = self
         self.searchBar.delegate = self
+        self.searchBar.placeholder = vm.placeHolderMessage
+        
+        self.title = self.vm.title
     }
 }
 
@@ -48,6 +51,10 @@ extension AddCityViewController : UITableViewDelegate, UITableViewDataSource {
         
         self.vm.insertToContext(Index: indexPath.row)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(60)
     }
 }
 

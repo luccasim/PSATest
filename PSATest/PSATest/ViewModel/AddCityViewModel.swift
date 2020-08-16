@@ -21,6 +21,14 @@ final class AddCityViewModel {
         return self.data.count
     }
     
+    var placeHolderMessage : String {
+        return "Enter a city name."
+    }
+    
+    var title : String {
+        return "Search a City"
+    }
+    
     func search(CityName:String, Result: @escaping ((Bool)->())) {
         
         let newCity = City.fetch(Name:CityName)
