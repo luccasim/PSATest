@@ -76,11 +76,22 @@ class City : NSManagedObject {
         self.country = Reponse.sys.country
     }
     
+    /// No update rule, this method just replace the old metrics (like a setter)
     func update(OneCallReponse reponse:OpenWeatherWS.OneCallReponse) {
         
         guard let context = self.managedObjectContext else {return}
         
-        reponse.hourly.forEach { (hourly) in
+        if let hours = self.hours {
+            self.removeFromHours(hours)
+        }
+        
+        if let days = self.days {
+            self.removeFromDays(days)
+        }
+        
+        let hourlies = Array(reponse.hourly[0..<24])
+        
+        hourlies.forEach { (hourly) in
             let hour = Hour(context: context)
             hour.set(OneCallReponse: hourly)
             self.addToHours(hour)
