@@ -52,7 +52,7 @@ class City : NSManagedObject {
     
     func update(Reponse:OpenWeatherWS.WeatherReponse) {
         
-        self.dt = Int64(Reponse.dt)
+        self.dt = 0
         
         self.lon = Reponse.coord.lon
         self.lat = Reponse.coord.lat
@@ -80,6 +80,8 @@ class City : NSManagedObject {
     func update(OneCallReponse reponse:OpenWeatherWS.OneCallReponse) {
         
         guard let context = self.managedObjectContext else {return}
+        
+        self.dt = Int64(Date().timeIntervalSince1970)
         
         if let hours = self.hours {
             self.removeFromHours(hours)
@@ -132,6 +134,11 @@ extension City {
     
     var hasForecastDays : Bool {
         return !self.sortedDays.isEmpty
+    }
+    
+    var shouldUpdate : Bool {
+        let nextUpdate = Double(self.dt + 300)
+        return Date().timeIntervalSince1970 > nextUpdate
     }
     
 }

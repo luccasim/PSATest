@@ -29,6 +29,8 @@
 		843B653424E4A9D300036A60 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 843B653324E4A9D200036A60 /* README.md */; };
 		8442BEC724E84631005BB858 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442BEC624E84631005BB858 /* Hour.swift */; };
 		8442BEC924E846B2005BB858 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442BEC824E846B2005BB858 /* Day.swift */; };
+		8456329224EA19CF00DA20F4 /* OpenWeatherFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8456328F24EA19BC00DA20F4 /* OpenWeatherFramework.framework */; };
+		8456329324EA19CF00DA20F4 /* OpenWeatherFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8456328F24EA19BC00DA20F4 /* OpenWeatherFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84FED6A924E2CF1C0031B502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FED6A824E2CF1C0031B502 /* AppDelegate.swift */; };
 		84FED6AB24E2CF1C0031B502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FED6AA24E2CF1C0031B502 /* SceneDelegate.swift */; };
 		84FED6B024E2CF1C0031B502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FED6AE24E2CF1C0031B502 /* Main.storyboard */; };
@@ -40,6 +42,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8456328E24EA19BC00DA20F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8456328924EA19BC00DA20F4 /* OpenWeatherFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84FED67E24E2C7970031B502;
+			remoteInfo = OpenWeatherFramework;
+		};
+		8456329024EA19BC00DA20F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8456328924EA19BC00DA20F4 /* OpenWeatherFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84FED68724E2C7970031B502;
+			remoteInfo = OpenWeatherFrameworkTests;
+		};
 		84FED6BF24E2CF1D0031B502 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84FED69D24E2CF1C0031B502 /* Project object */;
@@ -63,6 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8456329324EA19CF00DA20F4 /* OpenWeatherFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +109,7 @@
 		843B653324E4A9D200036A60 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8442BEC624E84631005BB858 /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
 		8442BEC824E846B2005BB858 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		8456328924EA19BC00DA20F4 /* OpenWeatherFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OpenWeatherFramework.xcodeproj; path = ../../MyOpenWeather/OpenWeatherFramework/OpenWeatherFramework.xcodeproj; sourceTree = "<group>"; };
 		84FED6A524E2CF1C0031B502 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FED6A824E2CF1C0031B502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FED6AA24E2CF1C0031B502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8456329224EA19CF00DA20F4 /* OpenWeatherFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +205,23 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		8456328824EA19BC00DA20F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8456328924EA19BC00DA20F4 /* OpenWeatherFramework.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8456328A24EA19BC00DA20F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8456328F24EA19BC00DA20F4 /* OpenWeatherFramework.framework */,
+				8456329124EA19BC00DA20F4 /* OpenWeatherFrameworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8467644C24E5E564000A80A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +280,7 @@
 				84FED6C124E2CF1D0031B502 /* PSATestTests */,
 				84FED6CC24E2CF1D0031B502 /* PSATestUITests */,
 				84FED6A624E2CF1C0031B502 /* Products */,
+				8456328824EA19BC00DA20F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -378,6 +415,12 @@
 			mainGroup = 84FED69C24E2CF1C0031B502;
 			productRefGroup = 84FED6A624E2CF1C0031B502 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8456328A24EA19BC00DA20F4 /* Products */;
+					ProjectRef = 8456328924EA19BC00DA20F4 /* OpenWeatherFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				84FED6A424E2CF1C0031B502 /* PSATest */,
@@ -386,6 +429,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8456328F24EA19BC00DA20F4 /* OpenWeatherFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OpenWeatherFramework.framework;
+			remoteRef = 8456328E24EA19BC00DA20F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8456329124EA19BC00DA20F4 /* OpenWeatherFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OpenWeatherFrameworkTests.xctest;
+			remoteRef = 8456329024EA19BC00DA20F4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		84FED6A324E2CF1C0031B502 /* Resources */ = {
