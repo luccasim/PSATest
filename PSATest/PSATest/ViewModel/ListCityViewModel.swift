@@ -66,6 +66,8 @@ class ListCityViewModel {
     
     func fetchForcast(City:City) {
         
+        guard City.shouldUpdate else {return}
+                
         self.group.enter()
                 
         self.ws.oneCallTask(Coordinates: (Lon: City.lon, Lat: City.lat)) { (result) in
