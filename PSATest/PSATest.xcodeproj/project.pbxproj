@@ -29,8 +29,6 @@
 		843B653424E4A9D300036A60 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 843B653324E4A9D200036A60 /* README.md */; };
 		8442BEC724E84631005BB858 /* Hour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442BEC624E84631005BB858 /* Hour.swift */; };
 		8442BEC924E846B2005BB858 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442BEC824E846B2005BB858 /* Day.swift */; };
-		8442BED224E9E89D005BB858 /* OpenWeatherFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8442BED024E9E894005BB858 /* OpenWeatherFramework.framework */; };
-		8442BED324E9E89D005BB858 /* OpenWeatherFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8442BED024E9E894005BB858 /* OpenWeatherFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84FED6A924E2CF1C0031B502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FED6A824E2CF1C0031B502 /* AppDelegate.swift */; };
 		84FED6AB24E2CF1C0031B502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FED6AA24E2CF1C0031B502 /* SceneDelegate.swift */; };
 		84FED6B024E2CF1C0031B502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FED6AE24E2CF1C0031B502 /* Main.storyboard */; };
@@ -65,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8442BED324E9E89D005BB858 /* OpenWeatherFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +92,6 @@
 		843B653324E4A9D200036A60 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8442BEC624E84631005BB858 /* Hour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hour.swift; sourceTree = "<group>"; };
 		8442BEC824E846B2005BB858 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		8442BED024E9E894005BB858 /* OpenWeatherFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenWeatherFramework.framework; sourceTree = "<group>"; };
 		84FED6A524E2CF1C0031B502 /* MyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84FED6A824E2CF1C0031B502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84FED6AA24E2CF1C0031B502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8442BED224E9E89D005BB858 /* OpenWeatherFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +210,6 @@
 		8467644E24E5E5C1000A80A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8442BED024E9E894005BB858 /* OpenWeatherFramework.framework */,
 				8434C49A24E6B48E00130FC2 /* Shared */,
 				8467645024E5E84A000A80A6 /* CoreData */,
 			);
