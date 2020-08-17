@@ -10,7 +10,7 @@ The Application deals with the requested functionalities (2 part):
 - one user interface application (this project).
 - a component part as framework who collect information from an API.
 
-Delivery date 17-09-20 (1 week for completion).
+Delivery date *17-09-20* (1 week for completion).
 
 ## Application Part
 
@@ -23,6 +23,11 @@ The application is made of 3 screens (contains in Main.storyboard) :
 - a screen for search and add a valid city. (AddCityViewController)
 - a screen for show somes details information from the API (DetailViewController).
 
+As a Bonus:
+- forecast for the next 6 days, and 24 hours.
+- To limit API request add a rule for update (every 5 minutes per city).
+- Data persistance, The CoreData context is saved when create or delete a city (and when app enter in background). 
+
 The project use the MVVM pattern. 
 
 A Context allows the sharing ressources.
@@ -31,15 +36,15 @@ CoreData is used for manage the application Model.
 
 ## Framework Part
 
-The source code of the framework has its own [repository](https://github.com/luccasim/MyOpenWeather)
+The source code of the framework has its own [repository](https://github.com/luccasim/MyOpenWeather).
+
+**You should clone the repository and add it to the project framework and embedded content**
 
 The framework use 2 services :
-- Weather for valid a city added by the user, and retrieve the coordinates.
-- OneCall for retrieve a complete information and forecast from the city.
+- Weather, for valid a city added by the user, and retrieve the coordinates.
+- OneCall, for retrieve complete informations and forecast from the city.
 
 For more informations about how this framework work, please check his README.md
-
-**The Framework is compiled under the x86_64 architecture (for the iOS simulator)**
 
 ## Developpement
 
