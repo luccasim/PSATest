@@ -40,4 +40,16 @@ class PSATestUITests: XCTestCase {
             }
         }
     }
+    
+    func testSearchCity() {
+        
+        let app = XCUIApplication()
+        app.navigationBars["Cities"].buttons["Add"].tap()
+        app.tables["Empty list"].searchFields["Enter a city name."].tap()
+        
+        let madridStaticText = app.tables/*@START_MENU_TOKEN@*/.staticTexts["Madrid"]/*[[".cells.staticTexts[\"Madrid\"]",".staticTexts[\"Madrid\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        madridStaticText.tap()
+        app.navigationBars["Madrid"].buttons["Cities"].tap()
+        
+    }
 }

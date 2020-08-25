@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MyLibrary",
+        "repositoryURL": "https://github.com/luccasim/MyLibrary.git",
+        "state": {
+          "branch": null,
+          "revision": "3f9b8f11b6b9f1e2e97cc27248498b5374aa5293",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

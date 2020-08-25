@@ -1,4 +1,4 @@
-# PSATest
+# MyWeather
 
 ## Introduction
 
@@ -10,7 +10,7 @@ The Application deals with the requested functionalities (2 part):
 - one user interface application (this project).
 - a component part as framework who collect information from an API.
 
-Delivery date *17-09-20* (1 week for completion).
+Delivery date *17-08-20* (1 week for completion).
 
 ## Application Part
 

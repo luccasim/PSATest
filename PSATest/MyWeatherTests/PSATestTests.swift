@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import PSATest
+@testable import MyWeather
 
 class PSATestTests: XCTestCase {
 

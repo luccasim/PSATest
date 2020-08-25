@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import OpenWeatherFramework
+import MyLibrary
 
 class ListCityViewModel {
     
@@ -94,5 +95,4 @@ class ListCityViewModel {
             Complete()
         }
     }
-    
 }
